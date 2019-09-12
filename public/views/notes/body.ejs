@@ -1,0 +1,11 @@
+<ul>
+<% for (var note of notes) { %>
+  <li>
+    <a href="<%- serverURL %>/<%- note.noteId %>"><%= note.info.title %></a>
+    <% for (var tag of note.info.tags) { %>
+      <span class="label label-default"><%= tag %></span>
+    <% } %>
+    <span><%= note.fromNow %></span>
+  </li>
+<% } %>
+</ul>

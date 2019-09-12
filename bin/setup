@@ -20,6 +20,10 @@ EOF
 fi
 
 echo "copy config files"
+if [ ! -f pm2.json ]; then
+  cp pm2.json.example pm2.json
+fi
+
 if [ ! -f config.json ]; then
   cp config.json.example config.json
 fi
@@ -38,6 +42,7 @@ cat << EOF
 Edit the following config file to setup CodiMD server and client.
 Read more info at https://github.com/hackmdio/codimd#configuration-files
 
+* pm2.json              -- PM2 config
 * config.json           -- CodiMD config
 * .sequelizerc          -- db config
 
