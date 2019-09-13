@@ -123,6 +123,10 @@
         {
           "connectionString": "change this",
           "container": "change this"
+        },
+        "plantuml":
+        {
+          "server": "https://www.plantuml.com/plantuml"
         }
     }
 }
