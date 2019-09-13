@@ -5,7 +5,7 @@
     <% for (var tag of note.info.tags) { %>
       <span class="label label-default"><%= tag %></span>
     <% } %>
-    <span><%= note.fromNow %></span>
+    <small style="float: right;"><%= note.fromNow %></small>
   </li>
 <% } %>
 </ul>
