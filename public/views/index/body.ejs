@@ -12,6 +12,7 @@
                             <li class="ui-history<% if(signin) { %> active<% } %>"><a href="#"><%= __('History') %></a>
                             </li>
                             <div class="ui-signin" style="float: right; margin-top: 8px;<% if(signin) { %> display: none;<% } %>">
+                                <a type="button" href="<%- serverURL %>/notes" class="btn btn-sm btn-primary"><i class="fa fa-list"></i> <%= __('All notes') %></a>
                                 <% if (allowAnonymous) { %>
                                 <a type="button" href="<%- serverURL %>/new" class="btn btn-sm btn-primary"><i class="fa fa-plus"></i> <%= __('New guest note') %></a>
                                 <% } %>
@@ -20,6 +21,7 @@
                                 <% } %>
                             </div>
                             <div class="ui-signout" style="float: right; margin-top: 8px;<% if(!signin) { %> display: none;<% } %>">
+                                <a type="button" href="<%- serverURL %>/notes" class="btn btn-sm btn-primary"><i class="fa fa-list"></i> <%= __('All notes') %></a>
                                 <a type="button" href="<%- serverURL %>/new" class="btn btn-sm btn-primary"><i class="fa fa-plus"></i> <%= __('New note') %></a>
                                 <span class="ui-profile dropdown pull-right">
                                     <button id="profileLabel" class="btn btn-sm btn-link ui-profile-label" style="padding-right: 0;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

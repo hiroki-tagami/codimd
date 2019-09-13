@@ -18,6 +18,7 @@ backups/
 *.sqlite
 
 # ignore config files
+pm2.json
 config.json
 .sequelizerc
 
