@@ -50,8 +50,12 @@
             "consumerSecret": "change this"
         },
         "github": {
+            "authorizationURL": "",
+            "tokenURL": "",
+            "userProfileURL": "",
             "clientID": "change this",
-            "clientSecret": "change this"
+            "clientSecret": "change this",
+            "belongOrganization": ""
         },
         "gitlab": {
             "baseURL": "change this",
