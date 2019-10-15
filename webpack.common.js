@@ -71,7 +71,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: 'public/views/includes/scripts.ejs',
-      chunks: ['cover'],
+      chunks: ['search'],
       filename: path.join(__dirname, 'public/views/build/search-scripts.ejs'),
       inject: false
     }),
