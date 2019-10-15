@@ -11,7 +11,19 @@
                             </li>
                             <li class="ui-history<% if(signin) { %> active<% } %>"><a href="#"><%= __('History') %></a>
                             </li>
+
                             <div class="ui-signin" style="float: right; margin-top: 8px;<% if(signin) { %> display: none;<% } %>">
+
+			      <div class="ui-signin" style="float: right; <% if(signin) { %> display: none;<% } %>">
+				<div class="input-group" style="float: left; width:18em; padding: 0px 5px">
+				  <input class="form-control input-sm" type="text" placeholder="<%= __('Search') %>">
+				  <span class="input-group-btn">
+				    <button class="btn btn-default btn-sm" type="button" id="search-button"">
+				      <i class="fa fa-search" aria-hidden="true"></i>
+				    </button>
+				  </span>
+				</div>
+
                                 <a type="button" href="<%- serverURL %>/notes" class="btn btn-sm btn-primary"><i class="fa fa-list"></i> <%= __('All notes') %></a>
                                 <% if (allowAnonymous) { %>
                                 <a type="button" href="<%- serverURL %>/new" class="btn btn-sm btn-primary"><i class="fa fa-plus"></i> <%= __('New guest note') %></a>
