@@ -1,0 +1,16 @@
+<dl>
+<% for (var note of notes) { %>
+  <dt>
+    <h4>
+    <a href="<%- serverURL %>/<%- note.noteId %>"><%= note.info.title %></a>
+    <% for (var tag of note.info.tags) { %>
+      <span class="label label-default"><%= tag %></span>
+    <% } %>
+    <small style="float: right;"><%= note.fromNow %></small>
+    </h4>
+  </dt>
+  <blockquote>
+    <%- note.res %>
+  </blockquote>
+<% } %>
+</dl>

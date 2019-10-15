@@ -71,6 +71,12 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: 'public/views/includes/scripts.ejs',
+      chunks: ['cover'],
+      filename: path.join(__dirname, 'public/views/build/search-scripts.ejs'),
+      inject: false
+    }),
+    new HtmlWebpackPlugin({
+      template: 'public/views/includes/scripts.ejs',
       chunks: ['common', 'cover-pack'],
       filename: path.join(__dirname, 'public/views/build/cover-pack-scripts.ejs'),
       inject: false,
@@ -186,6 +192,9 @@ module.exports = {
     cover: [
       'babel-polyfill',
       path.join(__dirname, 'public/js/cover.js')
+    ],
+    search: [
+      path.join(__dirname, 'public/js/search.js')
     ],
     'cover-styles-pack': [
       path.join(__dirname, 'node_modules/bootstrap/dist/css/bootstrap.min.css'),
