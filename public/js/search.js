@@ -19,7 +19,6 @@ function addQueryStrings(words) {
   if(query.length > 0) {
     return "?" + query.join('&')
   }
-  
 }
 
 function onLoad() {
@@ -28,13 +27,12 @@ function onLoad() {
     for (const item of hash) {
       const[key, value] = item.split('=')
       if(key != 'word') {
-	words.push(key + ":" + value)
+        words.push(key + ":" + value)
       } else {
-	words.push(value)
+        words.push(value)
       }
       queryStrings[key] = value
     }
-    
     // add to input form from url query strings.
     if(words.length > 0) {
       $('input#search-word').val(decodeURI(words.join(" ")))
@@ -47,7 +45,6 @@ function onLoad() {
 // search
 function search() {
   words = $('input#search-word').val().split(' ')
-  console.log('WORDS LENGTH', words[0])
   let url = "/search"
   if(words[0] != "") {
      url  += addQueryStrings(words)
